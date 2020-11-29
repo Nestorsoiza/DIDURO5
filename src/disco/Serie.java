@@ -2,7 +2,7 @@ package disco;
 
 public class Serie implements Entregable {
 	private final static int NUM_TEMPORADAS_DEF = 3;
-	private final static int MAYOR = 1;
+	final static int MAYOR = 1;
 	private final static int MENOR = -1;
 	private final static int IGUAL = 0;
 	private  String titulo;

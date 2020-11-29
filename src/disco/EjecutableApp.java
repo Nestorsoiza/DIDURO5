@@ -37,5 +37,20 @@ public class EjecutableApp {
 		}
 		
 		System.out.println("Hay " + entregado + " artículos entregados");
+		
+		//esto no lo hubiera hecho estas comparaciones no se me hubieran ocurrido
+		Serie serieMayor = listaSeries[0];
+		Videojuego videojuegoMayor = listaVideojuegos[0];
+		
+		for (int i = 0; i < listaSeries.length; i++) {
+			if (listaSeries[i].compareTo(serieMayor) == Serie.MAYOR) {
+				serieMayor = listaSeries[i];
+			}
+			if (listaVideojuegos[i].compareTo(videojuegoMayor) == Videojuego.MAYOR) {
+				videojuegoMayor = listaVideojuegos[i];
+			}
+		}
+		System.out.println(videojuegoMayor);
+		System.out.println(serieMayor);
 	}
 }

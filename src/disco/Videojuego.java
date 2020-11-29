@@ -2,7 +2,7 @@ package disco;
 
 public class Videojuego implements Entregable {
 	private final static int NUM_HORASESTIMADAS_DEF = 100;
-	private final static int MAYOR = 1;
+	final static int MAYOR = 1;
 	private final static int MENOR = -1;
 	private final static int IGUAL = 0;
 	private String titulo;
