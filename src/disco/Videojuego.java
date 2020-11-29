@@ -1,6 +1,6 @@
 package disco;
 
-public abstract class Videojuego implements Entregable {
+public class Videojuego implements Entregable {
 	private final static int NUM_HORASESTIMADAS_DEF = 100;
 	private final static int MAYOR = 1;
 	private final static int MENOR = -1;
