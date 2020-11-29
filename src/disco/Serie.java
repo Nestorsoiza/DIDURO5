@@ -37,10 +37,43 @@ public class Serie implements Entregable {
 		this.creador = creador;
 	}
 	
+	@Override
 	public void entregar() {
 		entregado = true;
 	}
+	 @Override
+	public void devolver() {
+		 entregado = false;		
+	}
+	 
+	 @Override
+	public boolean isEntregado() {
+		if (entregado) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
+	 @Override
+	public int compareTo(Object a) {
+		 int estado = MENOR;
+		 Serie ref = (Serie)a;
+		 
+		if (numeroDeTemporadas > ref.getNumeroDeTemporadas()) {
+			 estado = MAYOR;
+		} else if (numeroDeTemporadas == ref.getNumeroDeTemporadas()) {
+			estado = IGUAL;
+		}
+		return estado;
+	}
+	 
+	 public boolean equals(Serie a) {
+		 if (titulo.equalsIgnoreCase(a.getTitulo()) && creador.equalsIgnoreCase(a.getCreador())) {
+			 return true;
+		 }
+		 return false;
+		}
 	@Override
 	public String toString() {
 		return "Información de la Serie: \n" + "\tTitulo: " + titulo + "\n" 
