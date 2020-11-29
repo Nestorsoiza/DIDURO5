@@ -18,7 +18,24 @@ public class EjecutableApp {
 		listaVideojuegos[3] = new Videojuego("Super Mario 3DS", 30, "Plataforma", "Nintendo");
 		listaVideojuegos[4] = new Videojuego("Final fantasy X", 200, "Rol", "Square Enix");
 		
-				
+		listaSeries[1].entregar();
+		listaSeries[4].entregar();
+		listaVideojuegos[0].entregar();
+		listaVideojuegos[3].entregar();
+		
+		int entregado = 0;
+		for (int i = 0; i < listaSeries.length; i++) {
+			if (listaSeries[i].isEntregado()) {
+				entregado += 1;
+				listaSeries[i].devolver();				
+			}
+		
+			if (listaVideojuegos[i].isEntregado()) {
+				entregado += 1;
+				listaVideojuegos[i].devolver();
+			}
+		}
+		
+		System.out.println("Hay " + entregado + " artículos entregados");
 	}
-
 }
