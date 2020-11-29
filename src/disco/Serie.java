@@ -37,17 +37,14 @@ public class Serie implements Entregable {
 		this.creador = creador;
 	}
 	
-	@Override
 	public void entregar() {
 		entregado = true;
 	}
-	 @Override
-	public void devolver() {
+	 public void devolver() {
 		 entregado = false;		
 	}
 	 
-	 @Override
-	public boolean isEntregado() {
+	 public boolean isEntregado() {
 		if (entregado) {
 			return true;
 		} else {
@@ -55,8 +52,7 @@ public class Serie implements Entregable {
 		}
 	}
 
-	 @Override
-	public int compareTo(Object a) {
+	 public int compareTo(Object a) {
 		 int estado = MENOR;
 		 Serie ref = (Serie)a;
 		 
