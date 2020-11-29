@@ -1,6 +1,6 @@
 package disco;
 
-public class Videojuego implements Entregable {
+public abstract class Videojuego implements Entregable {
 	private final static int NUM_HORASESTIMADAS_DEF = 100;
 	private final static int MAYOR = 1;
 	private final static int MENOR = -1;
@@ -34,6 +34,15 @@ public class Videojuego implements Entregable {
 	public void setCompañia(String compañia) {
 		this.compañia = compañia;
 	}
+	
+	public boolean equals(Videojuego a) {
+		if (titulo.equalsIgnoreCase(a.getTitulo())&& compañia.equalsIgnoreCase(a.getCompañia())) {
+			return true;
+		}
+			return false;
+		}
+	
+
 	@Override
 	public String toString() {
 		return "Informacion del videojuego: \n" +
