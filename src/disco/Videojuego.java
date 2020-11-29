@@ -35,6 +35,33 @@ public abstract class Videojuego implements Entregable {
 		this.compañia = compañia;
 	}
 	
+	@Override
+	public void entregar() {
+ 		entregado = true;
+	}
+	@Override
+	public void devolver() {
+ 		entregado = false;
+
+	}
+	@Override
+	public boolean isEntregado() {
+		if (entregado) {
+			return true;
+		}
+		return false;
+	}
+	@Override //No tengo ni papa de esto
+	public int compareTo(Object a) {
+		int estado = MENOR;
+		Videojuego ref = (Videojuego) a;
+		if (horasEstimadas > ref.getHorasEstimadas()) {
+			estado = MAYOR;
+		} else if (horasEstimadas == ref.getHorasEstimadas()) {
+			estado = IGUAL;
+		}
+		return estado;
+	}
 	public boolean equals(Videojuego a) {
 		if (titulo.equalsIgnoreCase(a.getTitulo())&& compañia.equalsIgnoreCase(a.getCompañia())) {
 			return true;
