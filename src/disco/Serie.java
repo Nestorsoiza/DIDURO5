@@ -67,8 +67,10 @@ public class Serie implements Entregable {
 	 public boolean equals(Serie a) {
 		 if (titulo.equalsIgnoreCase(a.getTitulo()) && creador.equalsIgnoreCase(a.getCreador())) {
 			 return true;
-		 }
-		 return false;
+		 }else { // tengo la duda de si no le pongo hace lo mismo
+			 return false;
+		}
+		 
 		}
 	@Override
 	public String toString() {
